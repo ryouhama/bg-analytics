@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-  "github.com/ryouhama/bg-analytics/domain/hero"
+	"bg-analytics/domain/hero"
 )
 
 func main() {
-	hero := Hero(1, "A・F・ケイ")
+	hero, _ := NewHero(1, "A・F・ケイ")
 
-  fmt.println(hero)
-  fmt.println(hero.id)
-  fmt.println(hero.name)
+  fmt.Println(hero.Id())
+  fmt.Println(hero.Name())
 }
+

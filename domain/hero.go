@@ -1,4 +1,4 @@
-package hero
+package domain
 
 type Hero struct {
 	id int
