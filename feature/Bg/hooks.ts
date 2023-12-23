@@ -7,8 +7,13 @@ export const useBgMaster = () => {
   };
 };
 
-export const useBgHistory = (userId: number) => {
-  return { histories: TestBgHistory };
+export const useBgHistory = async (_: number) => {
+  const fetch = (value: BgHistory[]) =>
+    new Promise<BgHistory[]>((resolve) => {
+      setTimeout(() => resolve(value), 300);
+    });
+  const histories = await fetch(TestBgHistory);
+  return { histories };
 };
 
 const TestBgHeros: BgHero[] = [

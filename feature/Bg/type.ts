@@ -15,5 +15,5 @@ export type BgHistory = {
   date: Date;
   rate: number;
   selectedHero: BgHero;
-  selectedAnomaly: BgAnomaly;
+  selectedAnomaly?: BgAnomaly;
 };

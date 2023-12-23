@@ -1,10 +1,10 @@
-import { Card, Text, Metric, BadgeDelta } from "@tremor/react";
+import { Text, Metric, BadgeDelta } from "@tremor/react";
 import { useBgHistory } from "./hooks";
 import { BgHistory } from "./type";
 
-export function Rating() {
+export async function Rating() {
   const dammyUserId = 1;
-  const { histories } = useBgHistory(dammyUserId);
+  const { histories } = await useBgHistory(dammyUserId);
 
   return (
     <>
